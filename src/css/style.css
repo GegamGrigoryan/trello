@@ -1,0 +1,175 @@
+body {
+    background-color: rgb(8, 8, 96);
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 30%;
+    min-width: 100px;
+    min-height: 200px;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    background-color: gray;
+
+    /* position: relative; */
+
+    font-size: 12px;
+    font-weight: 600;
+    color: blanchedalmond;
+}
+
+.section-title {
+    cursor: default;
+}
+
+.task-item {
+    width: 100%;
+    min-height: 40px;
+    background-color: blanchedalmond;
+    color: black;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.delete-item {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("https://img.icons8.com/dotty/40/delete-sign.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.task-item:hover .delete-item {
+    display: block;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.add-task-wrp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.add-tittle {
+    cursor: pointer;
+}
+
+.visible {
+    display: none;
+}
+
+/* .visible{
+    display: block;
+} */
+.task-textarea {
+    width: 99%;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.btn-add-wrp {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+}
+
+.add-btn {
+    width: 85px;
+    height: 30px;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    margin-right: 10px;
+
+}
+
+.delete-textarea {
+    background-image: url("https://img.icons8.com/dotty/30/delete-sign.png");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-file-img {
+    background-image: url("https://img.icons8.com/ios-filled/30/attach.png");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 20%;
+
+}
+
+.input-file {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    z-index: -9999;
+}
+
+.preview-img {
+    /*  width: 70px;
+    height: 50px; */
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+
+.task-item.dragged {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    z-index: 1000;
+
+    pointer-events: none;
+    background-color: rgb(90, 72, 72);
+}
+
+.hide {
+    display: none;
+}
+
+.hoverd {
+    background-color: rgb(144, 139, 139);
+}
